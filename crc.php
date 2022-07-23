@@ -70,6 +70,17 @@
         const CRC24_OS_9_CHECK         = 0x200fa5;
 
         const CRC32_AIXM_CHECK         = 0x3010bf7f;
+        const CRC32_AUTOSAR_CHECK      = 0x1697d06a;
+        const CRC32_BASE91_D_CHECK     = 0x87315576;
+        const CRC32_BZIP2_CHECK        = 0xfc891918;
+        const CRC32_CD_ROM_EDC_CHECK   = 0x6ec2edc4;
+        const CRC32_CKSUM_CHECK        = 0x765e7680;
+        const CRC32_ISCSI_CHECK        = 0xe3069283;
+        const CRC32_ISO_HDLC_CHECK     = 0xcbf43926;
+        const CRC32_JAMCRC_CHECK       = 0x340bc6d9;
+        const CRC32_MEF_CHECK          = 0xd2c22f51;
+        const CRC32_MPEG_2_CHECK       = 0x0376e6e7;
+        const CRC32_XFER_CHECK         = 0xbd0be338;
 
         /* CRC-8/AUTOSAR */
         public static function crc8_autosar($str): int {
@@ -369,6 +380,61 @@
         /* CRC-32/AIXM */
         public static function crc32_aixm($str): int {
             return self::crc32($str, 0x814141ab, 0x00000000, 0x00000000, false, false);
+        }
+
+        /* CRC-32/AUTOSAR */
+        public static function crc32_autosar($str): int {
+            return self::crc32($str, 0xf4acfb13, 0xffffffff, 0xffffffff, true, true);
+        }
+
+        /* CRC-32/BASE91-D */
+        public static function crc32_base91_d($str): int {
+            return self::crc32($str, 0xa833982b, 0xffffffff, 0xffffffff, true, true);
+        }
+
+        /* CRC-32/BZIP2 */
+        public static function crc32_bzip2($str): int {
+            return self::crc32($str, 0x04c11db7, 0xffffffff, 0xffffffff, false, false);
+        }
+
+        /* CRC-32/CD-ROM-EDC */
+        public static function crc32_cd_rom_edc($str): int {
+            return self::crc32($str, 0x8001801b, 0x00000000, 0x00000000, true, true);
+        }
+
+        /* CRC-32/CKSUM */
+        public static function crc32_cksum($str): int {
+            return self::crc32($str, 0x04c11db7, 0x00000000, 0xffffffff , false, false);
+        }
+
+        /* CRC-32/ISCSI */
+        public static function crc32_iscsi($str): int {
+            return self::crc32($str, 0x1edc6f41, 0xffffffff, 0xffffffff , true, true);
+        }
+
+        /* CRC-32/ISO-HDLC */
+        public static function crc32_iso_hdlc($str): int {
+            return self::crc32($str, 0x04c11db7, 0xffffffff, 0xffffffff , true, true);
+        }
+
+        /* CRC-32/JAMCRC */
+        public static function crc32_jamcrc($str): int {
+            return self::crc32($str, 0x04c11db7, 0xffffffff, 0x00000000 , true, true);
+        }
+
+        /* CRC-32/MEF */
+        public static function crc32_mef($str): int {
+            return self::crc32($str, 0x741b8cd7, 0xffffffff, 0x00000000 , true, true);
+        }
+
+        /* CRC-32/MPEG-2 */
+        public static function crc32_mpeg_2($str): int {
+            return self::crc32($str, 0x04c11db7, 0xffffffff, 0x00000000 , false, false);
+        }
+
+        /* CRC-32/XFER */
+        public static function crc32_xfer($str): int {
+            return self::crc32($str, 0x000000af, 0x00000000, 0x00000000 , false, false);
         }
 
         public static function crc8($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {

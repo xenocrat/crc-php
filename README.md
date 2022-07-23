@@ -83,3 +83,14 @@ Test all implementations by comparing a calculated result to a check value:
 * CRC-24/OPENPGP: `crc24_openpgp()`
 * CRC-24/OS-9: `crc24_os_9()`
 * CRC-32/AIXM: `crc32_aixm()`
+* CRC-32/AUTOSAR: `crc32_autosar()`
+* CRC-32/BASE91-D: `crc32_base91_d()`
+* CRC-32/BZIP2: `crc32_bzip2()`
+* CRC-32/CD-ROM-EDC: `crc32_cd_rom_edc()`
+* CRC-32/CKSUM: `crc32_cksum()`
+* CRC-32/ISCSI: `crc32_iscsi()`
+* CRC-32/ISO-HDLC: `crc32_iso_hdlc()`
+* CRC-32/JAMCRC: `crc32_jamcrc()`
+* CRC-32/MEF: `crc32_mef()`
+* CRC-32/MPEG-2: `crc32_mpeg_2()`
+* CRC-32/XFER: `crc32_xfer()`
