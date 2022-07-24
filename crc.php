@@ -2,8 +2,8 @@
     namespace xenocrat;
 
     class crc {
-        const CRC_VERSION_MAJOR        = 0;
-        const CRC_VERSION_MINOR        = 1;
+        const CRC_VERSION_MAJOR        = 1;
+        const CRC_VERSION_MINOR        = 0;
 
         const CRC_CHECK_DATA           = "123456789";
 
