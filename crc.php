@@ -438,6 +438,9 @@
         }
 
         public static function crc8($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+            if (!is_scalar($str))
+                throw new \Exception("Variable for CRC calculation must be a scalar.");
+
             $crc = $ini;
 
             for ($i = 0; $i < strlen($str); $i++) {
@@ -465,6 +468,9 @@
         }
 
         public static function crc16($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+            if (!is_scalar($str))
+                throw new \Exception("Variable for CRC calculation must be a scalar.");
+
             $crc = $ini;
 
             for ($i = 0; $i < strlen($str); $i++) {
@@ -492,6 +498,9 @@
         }
 
         public static function crc24($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+            if (!is_scalar($str))
+                throw new \Exception("Variable for CRC calculation must be a scalar.");
+
             $crc = $ini;
 
             for ($i = 0; $i < strlen($str); $i++) {
@@ -519,6 +528,9 @@
         }
 
         public static function crc32($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+            if (!is_scalar($str))
+                throw new \Exception("Variable for CRC calculation must be a scalar.");
+
             $crc = $ini;
 
             for ($i = 0; $i < strlen($str); $i++) {
