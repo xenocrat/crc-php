@@ -11,20 +11,21 @@ CRC-PHP is a PHP class implementing bitwise CRC-8/16/24/32/64 algorithms.
 
 Calculate the CRC-16/XMODEM result for a string:
 
-    $crc = \xenocrat\crc::crc16_xmodem("foobar");
+    use xenocrat\crc;
+    $crc = crc::crc16_xmodem("foobar");
 
 Read data from disk and calculate the CRC-24/OPENPGP result:
 
     $file = file_get_contents("README.md");
-    $crc = \xenocrat\crc::crc24_openpgp($file);
+    $crc = crc::crc24_openpgp($file);
 
 Test all implementations by comparing a calculated result to a check value:
 
-    \xenocrat\crc::test_crc8();
-    \xenocrat\crc::test_crc16();
-    \xenocrat\crc::test_crc24();
-    \xenocrat\crc::test_crc32();
-    \xenocrat\crc::test_crc64();
+    $results = crc::test_crc8();
+    $results = crc::test_crc16();
+    $results = crc::test_crc24();
+    $results = crc::test_crc32();
+    $results = crc::test_crc64();
 
 ## Implementations
 
