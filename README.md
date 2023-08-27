@@ -1,10 +1,11 @@
 ## What is this?
 
-CRC-PHP is a PHP class implementing CRC-8/16/24/32 algorithms.
+CRC-PHP is a PHP class implementing bitwise CRC-8/16/24/32/64 algorithms.
 
 ## Requirements
 
 * PHP 8.0+
+* CRC-32 and CRC-64 methods require a 64-bit build of PHP.
 
 ## Usage
 
@@ -19,7 +20,11 @@ Read data from disk and calculate the CRC-24/OPENPGP result:
 
 Test all implementations by comparing a calculated result to a check value:
 
-    \xenocrat\crc::test();
+    \xenocrat\crc::test_crc8();
+    \xenocrat\crc::test_crc16();
+    \xenocrat\crc::test_crc24();
+    \xenocrat\crc::test_crc32();
+    \xenocrat\crc::test_crc64();
 
 ## Implementations
 
@@ -94,3 +99,8 @@ Test all implementations by comparing a calculated result to a check value:
 * CRC-32/MEF: `crc32_mef()`
 * CRC-32/MPEG-2: `crc32_mpeg_2()`
 * CRC-32/XFER: `crc32_xfer()`
+* CRC-64/ECMA-182: `crc64_ecma_182()`
+* CRC-64/GO-ISO: `crc64_go_iso()`
+* CRC-64/MS: `crc64_ms()`
+* CRC-64/WE: `crc64_we()`
+* CRC-64/XZ: `crc64_xz()`
