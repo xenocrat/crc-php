@@ -1129,6 +1129,11 @@
             self::unpack_uint64($xor);
 
             $crc = $ini;
+            $x80 = "8000000000000000";
+            $xff = "ffffffffffffffff";
+
+            self::unpack_uint64($x80);
+            self::unpack_uint64($xff);
 
             for ($i = 0; $i < strlen($str); $i++) {
                 $byte = ord($str[$i]);
@@ -1139,10 +1144,10 @@
                 $crc ^= $byte << 56;
 
                 for ($j = 0; $j < 8; $j++) {
-                    if ($crc & -9223372036854775808)
-                        $crc = (($crc << 1) & -1) ^ $polynomial;
+                    if ($crc & $x80)
+                        $crc = (($crc << 1) & $xff) ^ $polynomial;
                     else
-                        $crc = ($crc << 1) & -1;
+                        $crc = ($crc << 1) & $xff;
                 }
             }
 
@@ -1154,33 +1159,32 @@
             return $result;
         }
 
-        public static function test_crc8(): int {
+        public static function test_crc8(): array {
             return self::test_crc("crc8");
         }
 
-        public static function test_crc16(): int {
+        public static function test_crc16(): array {
             return self::test_crc("crc16");
         }
 
-        public static function test_crc24(): int {
+        public static function test_crc24(): array {
             return self::test_crc("crc24");
         }
 
-        public static function test_crc32(): int {
+        public static function test_crc32(): array {
             return self::test_crc("crc32");
         }
 
-        public static function test_crc64(): int {
+        public static function test_crc64(): array {
             return self::test_crc("crc64");
         }
 
-        private static function test_crc($prefix): int {
+        private static function test_crc($prefix): array {
             $reflect = new \ReflectionClass(get_called_class());
             $methods = $reflect->getMethods(\ReflectionMethod::IS_PUBLIC);
-            $count = 0;
+            $results = array();
 
             foreach ($methods as $method) {
-                $count++;
                 $name = $method->getShortName();
 
                 if (strpos($name, $prefix."_") !== 0)
@@ -1192,11 +1196,17 @@
                 if (is_string($check))
                     self::unpack_uint64($check);
 
+                $results[] = array(
+                    "method" => $name,
+                    "calculated" => $value,
+                    "check" => $check
+                );
+
                 if ($value !== $check)
                     throw new \Exception("CRC check value mismatch: ".$name."()");
             }
 
-            return $count;
+            return $results;
         }
 
         private static function reflect_bits(&$num, $width): void {
