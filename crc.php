@@ -91,912 +91,912 @@
         /* CRC-8/AUTOSAR */
         public static function crc8_autosar($str): int {
             return self::crc8(
-                $str,
-                0x2f,
-                0xff,
-                0xff,
-                false,
-                false
+                str:$str,
+                polynomial:0x2f,
+                ini:0xff,
+                xor:0xff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/BLUETOOTH */
         public static function crc8_bluetooth($str): int {
             return self::crc8(
-                $str,
-                0xa7,
-                0x00,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0xa7,
+                ini:0x00,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-8/CDMA2000 */
         public static function crc8_cdma2000($str): int {
             return self::crc8(
-                $str,
-                0x9b,
-                0xff,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x9b,
+                ini:0xff,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/DARC */
         public static function crc8_darc($str): int {
             return self::crc8(
-                $str,
-                0x39,
-                0x00,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0x39,
+                ini:0x00,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-8/DVB-S2 */
         public static function crc8_dvb_s2($str): int {
             return self::crc8(
-                $str,
-                0xd5,
-                0x00,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0xd5,
+                ini:0x00,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/GSM-A */
         public static function crc8_gsm_a($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0x00,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x1d,
+                ini:0x00,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/GSM-B */
         public static function crc8_gsm_b($str): int {
             return self::crc8(
-                $str,
-                0x49,
-                0x00,
-                0xff,
-                false,
-                false
+                str:$str,
+                polynomial:0x49,
+                ini:0x00,
+                xor:0xff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/HITAG */
         public static function crc8_hitag($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0xff,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x1d,
+                ini:0xff,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/I-432-1 */
         public static function crc8_i_432_1($str): int {
             return self::crc8(
-                $str,
-                0x07,
-                0x00,
-                0x55,
-                false,
-                false
+                str:$str,
+                polynomial:0x07,
+                ini:0x00,
+                xor:0x55,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/I-CODE */
         public static function crc8_i_code($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0xfd,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x1d,
+                ini:0xfd,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/LTE */
         public static function crc8_lte($str): int {
             return self::crc8(
-                $str,
-                0x9b,
-                0x00,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x9b,
+                ini:0x00,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/MAXIM-DOW */
         public static function crc8_maxim_dow($str): int {
             return self::crc8(
-                $str,
-                0x31,
-                0x00,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0x31,
+                ini:0x00,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-8/MIFARE-MAD */
         public static function crc8_mifare_mad($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0xc7,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x1d,
+                ini:0xc7,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/NRSC-5 */
         public static function crc8_nrsc_5($str): int {
             return self::crc8(
-                $str,
-                0x31,
-                0xff,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x31,
+                ini:0xff,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/OPENSAFETY */
         public static function crc8_opensafety($str): int {
             return self::crc8(
-                $str,
-                0x2f,
-                0x00,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x2f,
+                ini:0x00,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/ROHC */
         public static function crc8_rohc($str): int {
             return self::crc8(
-                $str,
-                0x07,
-                0xff,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0x07,
+                ini:0xff,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-8/SAE-J1850 */
         public static function crc8_sae_j1850($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0xff,
-                0xff,
-                false,
-                false
+                str:$str,
+                polynomial:0x1d,
+                ini:0xff,
+                xor:0xff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/SMBUS */
         public static function crc8_smbus($str): int {
             return self::crc8(
-                $str,
-                0x07,
-                0x00,
-                0x00,
-                false,
-                false
+                str:$str,
+                polynomial:0x07,
+                ini:0x00,
+                xor:0x00,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-8/TECH-3250 */
         public static function crc8_tech_3250($str): int {
             return self::crc8(
-                $str,
-                0x1d,
-                0xff,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0x1d,
+                ini:0xff,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-8/WCDMA */
         public static function crc8_wcdma($str): int {
             return self::crc8(
-                $str,
-                0x9b,
-                0x00,
-                0x00,
-                true,
-                true
+                str:$str,
+                polynomial:0x9b,
+                ini:0x00,
+                xor:0x00,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/ISO-IEC-14443-3-A */
         public static function crc16_a($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xc6c6,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0xc6c6,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/ARC */
         public static function crc16_arc($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0x0000,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x8005,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/CDMA2000 */
         public static function crc16_cdma2000($str): int {
             return self::crc16(
-                $str,
-                0xc867,
-                0xffff,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0xc867,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/CMS */
         public static function crc16_cms($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0xffff,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x8005,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/DDS-110 */
         public static function crc16_dds_110($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0x800d,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x8005,
+                ini:0x800d,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/DECT-R */
         public static function crc16_dect_r($str): int {
             return self::crc16(
-                $str,
-                0x0589,
-                0x0000,
-                0x0001,
-                false,
-                false
+                str:$str,
+                polynomial:0x0589,
+                ini:0x0000,
+                xor:0x0001,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/DECT-X */
         public static function crc16_dect_x($str): int {
             return self::crc16(
-                $str,
-                0x0589,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x0589,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/DNP */
         public static function crc16_dnp($str): int {
             return self::crc16(
-                $str,
-                0x3d65,
-                0x0000,
-                0xffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x3d65,
+                ini:0x0000,
+                xor:0xffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/EN-13757 */
         public static function crc16_en_13757($str): int {
             return self::crc16(
-                $str,
-                0x3d65,
-                0x0000,
-                0xffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x3d65,
+                ini:0x0000,
+                xor:0xffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/GENIBUS */
         public static function crc16_genibus($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xffff,
-                0xffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x1021,
+                ini:0xffff,
+                xor:0xffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/GSM */
         public static function crc16_gsm($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0x0000,
-                0xffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x1021,
+                ini:0x0000,
+                xor:0xffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/IBM-3740 */
         public static function crc16_ibm_3740($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xffff,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x1021,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/IBM-SDLC */
         public static function crc16_ibm_sdlc($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xffff,
-                0xffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0xffff,
+                xor:0xffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/KERMIT */
         public static function crc16_kermit($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0x0000,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/LJ1200 */
         public static function crc16_lj1200($str): int {
             return self::crc16(
-                $str,
-                0x6f63,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x6f63,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/M17 */
         public static function crc16_m17($str): int {
             return self::crc16(
-                $str,
-                0x5935,
-                0xffff,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x5935,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/MAXIM-DOW */
         public static function crc16_maxim_dow($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0x0000,
-                0xffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x8005,
+                ini:0x0000,
+                xor:0xffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/MCRF4XX */
         public static function crc16_mcrf4xx($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xffff,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/MODBUS */
         public static function crc16_modbus($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0xffff,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x8005,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/NRSC-5 */
         public static function crc16_nrsc_5($str): int {
             return self::crc16(
-                $str,
-                0x080b,
-                0xffff,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x080b,
+                ini:0xffff,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/OPENSAFETY-A */
         public static function crc16_opensafety_a($str): int {
             return self::crc16(
-                $str,
-                0x5935,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x5935,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/OPENSAFETY-B */
         public static function crc16_opensafety_b($str): int {
             return self::crc16(
-                $str,
-                0x755b,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x755b,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/PROFIBUS */
         public static function crc16_profibus($str): int {
             return self::crc16(
-                $str,
-                0x1dcf,
-                0xffff,
-                0xffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x1dcf,
+                ini:0xffff,
+                xor:0xffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/RIELLO */
         public static function crc16_riello($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0xb2aa,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0xb2aa,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/SPI-FUJITSU */
         public static function crc16_spi_fujitsu($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0x1d0f,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x1021,
+                ini:0x1d0f,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/T10-DIF */
         public static function crc16_t10_dif($str): int {
             return self::crc16(
-                $str,
-                0x8bb7,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x8bb7,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/TELEDISK */
         public static function crc16_teledisk($str): int {
             return self::crc16(
-                $str,
-                0xa097,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0xa097,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/TMS37157 */
         public static function crc16_tms37157($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0x89ec,
-                0x0000,
-                true,
-                true
+                str:$str,
+                polynomial:0x1021,
+                ini:0x89ec,
+                xor:0x0000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/UMTS */
         public static function crc16_umts($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x8005,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-16/USB */
         public static function crc16_usb($str): int {
             return self::crc16(
-                $str,
-                0x8005,
-                0xffff,
-                0xffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x8005,
+                ini:0xffff,
+                xor:0xffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-16/XMODEM */
         public static function crc16_xmodem($str): int {
             return self::crc16(
-                $str,
-                0x1021,
-                0x0000,
-                0x0000,
-                false,
-                false
+                str:$str,
+                polynomial:0x1021,
+                ini:0x0000,
+                xor:0x0000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/BLE */
         public static function crc24_ble($str): int {
             return self::crc24(
-                $str,
-                0x00065b,
-                0x555555,
-                0x000000,
-                true,
-                true
+                str:$str,
+                polynomial:0x00065b,
+                ini:0x555555,
+                xor:0x000000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-24/FLEXRAY-A */
         public static function crc24_flexray_a($str): int {
             return self::crc24(
-                $str,
-                0x5d6dcb,
-                0xfedcba,
-                0x000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x5d6dcb,
+                ini:0xfedcba,
+                xor:0x000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/FLEXRAY-B */
         public static function crc24_flexray_b($str): int {
             return self::crc24(
-                $str,
-                0x5d6dcb,
-                0xabcdef,
-                0x000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x5d6dcb,
+                ini:0xabcdef,
+                xor:0x000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/INTERLAKEN */
         public static function crc24_interlaken($str): int {
             return self::crc24(
-                $str,
-                0x328b63,
-                0xffffff,
-                0xffffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x328b63,
+                ini:0xffffff,
+                xor:0xffffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/LTE-A */
         public static function crc24_lte_a($str): int {
             return self::crc24(
-                $str,
-                0x864cfb,
-                0x000000,
-                0x000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x864cfb,
+                ini:0x000000,
+                xor:0x000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/LTE-B */
         public static function crc24_lte_b($str): int {
             return self::crc24(
-                $str,
-                0x800063,
-                0x000000,
-                0x000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x800063,
+                ini:0x000000,
+                xor:0x000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/OPENPGP */
         public static function crc24_openpgp($str): int {
             return self::crc24(
-                $str,
-                0x864cfb,
-                0xb704ce,
-                0x000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x864cfb,
+                ini:0xb704ce,
+                xor:0x000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-24/OS-9 */
         public static function crc24_os_9($str): int {
             return self::crc24(
-                $str,
-                0x800063,
-                0xffffff,
-                0xffffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x800063,
+                ini:0xffffff,
+                xor:0xffffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-32/AIXM */
         public static function crc32_aixm($str): int {
             return self::crc32(
-                $str,
-                0x814141ab,
-                0x00000000,
-                0x00000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x814141ab,
+                ini:0x00000000,
+                xor:0x00000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-32/AUTOSAR */
         public static function crc32_autosar($str): int {
             return self::crc32(
-                $str,
-                0xf4acfb13,
-                0xffffffff,
-                0xffffffff,
-                true,
-                true
+                str:$str,
+                polynomial:0xf4acfb13,
+                ini:0xffffffff,
+                xor:0xffffffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/BASE91-D */
         public static function crc32_base91_d($str): int {
             return self::crc32(
-                $str,
-                0xa833982b,
-                0xffffffff,
-                0xffffffff,
-                true,
-                true
+                str:$str,
+                polynomial:0xa833982b,
+                ini:0xffffffff,
+                xor:0xffffffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/BZIP2 */
         public static function crc32_bzip2($str): int {
             return self::crc32(
-                $str,
-                0x04c11db7,
-                0xffffffff,
-                0xffffffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x04c11db7,
+                ini:0xffffffff,
+                xor:0xffffffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-32/CD-ROM-EDC */
         public static function crc32_cd_rom_edc($str): int {
             return self::crc32(
-                $str,
-                0x8001801b,
-                0x00000000,
-                0x00000000,
-                true,
-                true
+                str:$str,
+                polynomial:0x8001801b,
+                ini:0x00000000,
+                xor:0x00000000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/CKSUM */
         public static function crc32_cksum($str): int {
             return self::crc32(
-                $str,
-                0x04c11db7,
-                0x00000000,
-                0xffffffff,
-                false,
-                false
+                str:$str,
+                polynomial:0x04c11db7,
+                ini:0x00000000,
+                xor:0xffffffff,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-32/ISCSI */
         public static function crc32_iscsi($str): int {
             return self::crc32(
-                $str,
-                0x1edc6f41,
-                0xffffffff,
-                0xffffffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x1edc6f41,
+                ini:0xffffffff,
+                xor:0xffffffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/ISO-HDLC */
         public static function crc32_iso_hdlc($str): int {
             return self::crc32(
-                $str,
-                0x04c11db7,
-                0xffffffff,
-                0xffffffff,
-                true,
-                true
+                str:$str,
+                polynomial:0x04c11db7,
+                ini:0xffffffff,
+                xor:0xffffffff,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/JAMCRC */
         public static function crc32_jamcrc($str): int {
             return self::crc32(
-                $str,
-                0x04c11db7,
-                0xffffffff,
-                0x00000000,
-                true,
-                true
+                str:$str,
+                polynomial:0x04c11db7,
+                ini:0xffffffff,
+                xor:0x00000000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/MEF */
         public static function crc32_mef($str): int {
             return self::crc32(
-                $str,
-                0x741b8cd7,
-                0xffffffff,
-                0x00000000,
-                true,
-                true
+                str:$str,
+                polynomial:0x741b8cd7,
+                ini:0xffffffff,
+                xor:0x00000000,
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-32/MPEG-2 */
         public static function crc32_mpeg_2($str): int {
             return self::crc32(
-                $str,
-                0x04c11db7,
-                0xffffffff,
-                0x00000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x04c11db7,
+                ini:0xffffffff,
+                xor:0x00000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-32/XFER */
         public static function crc32_xfer($str): int {
             return self::crc32(
-                $str,
-                0x000000af,
-                0x00000000,
-                0x00000000,
-                false,
-                false
+                str:$str,
+                polynomial:0x000000af,
+                ini:0x00000000,
+                xor:0x00000000,
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-64/ECMA-182 */
         public static function crc64_ecma_182($str): int {
             return self::crc64(
-                $str,
-                "42f0e1eba9ea3693",
-                "0000000000000000",
-                "0000000000000000",
-                false,
-                false
+                str:$str,
+                polynomial:"42f0e1eba9ea3693",
+                ini:"0000000000000000",
+                xor:"0000000000000000",
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-64/GO-ISO */
         public static function crc64_go_iso($str): int {
             return self::crc64(
-                $str,
-                "000000000000001b",
-                "ffffffffffffffff",
-                "ffffffffffffffff",
-                true,
-                true
+                str:$str,
+                polynomial:"000000000000001b",
+                ini:"ffffffffffffffff",
+                xor:"ffffffffffffffff",
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-64/MS */
         public static function crc64_ms($str): int {
             return self::crc64(
-                $str,
-                "259c84cba6426349",
-                "ffffffffffffffff",
-                "0000000000000000",
-                true,
-                true
+                str:$str,
+                polynomial:"259c84cba6426349",
+                ini:"ffffffffffffffff",
+                xor:"0000000000000000",
+                ref_in:true,
+                ref_out:true
             );
         }
 
         /* CRC-64/WE */
         public static function crc64_we($str): int {
             return self::crc64(
-                $str,
-                "42f0e1eba9ea3693",
-                "ffffffffffffffff",
-                "ffffffffffffffff",
-                false,
-                false
+                str:$str,
+                polynomial:"42f0e1eba9ea3693",
+                ini:"ffffffffffffffff",
+                xor:"ffffffffffffffff",
+                ref_in:false,
+                ref_out:false
             );
         }
 
         /* CRC-64/XZ */
         public static function crc64_xz($str): int {
             return self::crc64(
-                $str,
-                "42f0e1eba9ea3693",
-                "ffffffffffffffff",
-                "ffffffffffffffff",
-                true,
-                true
+                str:$str,
+                polynomial:"42f0e1eba9ea3693",
+                ini:"ffffffffffffffff",
+                xor:"ffffffffffffffff",
+                ref_in:true,
+                ref_out:true
             );
         }
 
