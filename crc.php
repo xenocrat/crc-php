@@ -3,7 +3,7 @@
 
     class crc {
         const CRC_VERSION_MAJOR        = 2;
-        const CRC_VERSION_MINOR        = 0;
+        const CRC_VERSION_MINOR        = 1;
 
         const CRC_CHECK_DATA           = "123456789";
 
@@ -1002,7 +1002,9 @@
 
         public static function crc8($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
             if (!is_scalar($str))
-                throw new \Exception("Variable for CRC calculation must be a scalar.");
+                throw new \InvalidArgumentException(
+                    "Variable for CRC calculation must be a scalar."
+                );
 
             $crc = $ini;
 
@@ -1032,7 +1034,9 @@
 
         public static function crc16($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
             if (!is_scalar($str))
-                throw new \Exception("Variable for CRC calculation must be a scalar.");
+                throw new \InvalidArgumentException(
+                    "Variable for CRC calculation must be a scalar."
+                );
 
             $crc = $ini;
 
@@ -1062,7 +1066,9 @@
 
         public static function crc24($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
             if (!is_scalar($str))
-                throw new \Exception("Variable for CRC calculation must be a scalar.");
+                throw new \InvalidArgumentException(
+                    "Variable for CRC calculation must be a scalar."
+                );
 
             $crc = $ini;
 
@@ -1092,7 +1098,9 @@
 
         public static function crc32($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
             if (!is_scalar($str))
-                throw new \Exception("Variable for CRC calculation must be a scalar.");
+                throw new \InvalidArgumentException(
+                    "Variable for CRC calculation must be a scalar."
+                );
 
             $crc = $ini;
 
@@ -1122,7 +1130,9 @@
 
         public static function crc64($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
             if (!is_scalar($str))
-                throw new \Exception("Variable for CRC calculation must be a scalar.");
+                throw new \InvalidArgumentException(
+                    "Variable for CRC calculation must be a scalar."
+                );
 
             self::unpack_uint64($polynomial);
             self::unpack_uint64($ini);
@@ -1203,7 +1213,9 @@
                 );
 
                 if ($value !== $check)
-                    throw new \Exception("CRC check value mismatch: ".$name."()");
+                    throw new \UnexpectedValueException(
+                        "CRC check value mismatch: ".$name."()"
+                    );
             }
 
             return $results;
