@@ -3,7 +3,7 @@
 
     class crc {
         const CRC_VERSION_MAJOR        = 2;
-        const CRC_VERSION_MINOR        = 1;
+        const CRC_VERSION_MINOR        = 2;
 
         const CRC_CHECK_DATA           = "123456789";
 
