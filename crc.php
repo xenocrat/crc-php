@@ -1032,7 +1032,14 @@
             return $result;
         }
 
-        public static function crc16($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+        public static function crc16(
+            $str,
+            $polynomial,
+            $ini,
+            $xor,
+            $ref_in,
+            $ref_out
+        ): int {
             if (!is_scalar($str))
                 throw new \InvalidArgumentException(
                     "Variable for CRC calculation must be a scalar."
@@ -1064,7 +1071,14 @@
             return $result;
         }
 
-        public static function crc24($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+        public static function crc24(
+            $str,
+            $polynomial,
+            $ini,
+            $xor,
+            $ref_in,
+            $ref_out
+        ): int {
             if (!is_scalar($str))
                 throw new \InvalidArgumentException(
                     "Variable for CRC calculation must be a scalar."
@@ -1096,7 +1110,18 @@
             return $result;
         }
 
-        public static function crc32($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+        public static function crc32($str,
+            $polynomial,
+            $ini,
+            $xor,
+            $ref_in,
+            $ref_out
+        ): int {
+            if (PHP_INT_SIZE < 8)
+                throw new \RuntimeException(
+                    "CRC-32 calculation requires 64-bit integers."
+                );
+
             if (!is_scalar($str))
                 throw new \InvalidArgumentException(
                     "Variable for CRC calculation must be a scalar."
@@ -1128,7 +1153,19 @@
             return $result;
         }
 
-        public static function crc64($str, $polynomial, $ini, $xor, $ref_in, $ref_out): int {
+        public static function crc64(
+            $str,
+            $polynomial,
+            $ini,
+            $xor,
+            $ref_in,
+            $ref_out
+        ): int {
+            if (PHP_INT_SIZE < 8)
+                throw new \RuntimeException(
+                    "CRC-64 calculation requires 64-bit integers."
+                );
+
             if (!is_scalar($str))
                 throw new \InvalidArgumentException(
                     "Variable for CRC calculation must be a scalar."
@@ -1197,7 +1234,7 @@
             foreach ($methods as $method) {
                 $name = $method->getShortName();
 
-                if (strpos($name, $prefix."_") !== 0)
+                if (!str_starts_with($name, $prefix."_"))
                     continue;
 
                 $value = self::$name(self::CRC_CHECK_DATA);
